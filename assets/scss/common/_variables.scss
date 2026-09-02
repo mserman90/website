@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Color system
 
 $white:    #fff;
@@ -10,10 +12,9 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:    #000;
+$black:    #1d2d35;
 
 $yellow:   #ffe000;
-$black:    #1d2d35;
 $beige:    #fbf7f0;
 
 // $red:      #e55235;
@@ -27,7 +28,7 @@ $pink-500: #d32e9d;
 $primary: $purple;
 
 $color-btn-bg: $pink-500;
-$color-btn-border: darken($pink-500, 5%);
+$color-btn-border: color.adjust($pink-500, $lightness: -5%);
 $color-btn-text: $white;
 
 // Options
@@ -49,15 +50,9 @@ $enable-negative-margins:     true;
 $enable-deprecation-messages: true;
 $enable-important-utilities:  true;
 
-/** Bootstrap navbar fix (https://git.io/fADqW) */
+/** Bootstrap navbar fix */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-// $enable-responsive-font-sizes: true;
 
 // Body
 //
@@ -117,8 +112,6 @@ $font-size-lg:                $font-size-base * 1.25;
 $font-size-md:                $font-size-base * 1.125;
 $font-size-sm:                $font-size-base * 0.875;
 
-// $line-height-base:            1.5;
-
 $headings-font-family:        null;
 $headings-font-weight:        700;
 
@@ -128,13 +121,12 @@ $lead-font-weight:            400;
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
 
 $spacer: 1rem;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer / 2;
+$navbar-padding-y:                  $spacer * 0.5;
 $navbar-padding-x:                  null;
 
 $navbar-nav-link-padding-x:         0.5rem;

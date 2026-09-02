@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+public
+resources
+.gitignore
+Dockerfile
+.dockerignore
+*.log
+.DS_Store
+Thumbs.db

@@ -3,7 +3,7 @@
   "description": "adsb.lol website",
   "version": "0.1.0",
   "engines": {
-    "node": ">=16.16.0"
+    "node": ">=20.0.0"
   },
   "browserslist": [
     "defaults"
@@ -22,7 +22,7 @@
     "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
     "build:preview": "npm run build -D -F",
     "clean": "shx rm -rf public resources",
-    "clean:install": "shx rm -rf package-lock.json node_modules ",
+    "clean:install": "shx rm -rf package-lock.json node_modules",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
     "lint:scripts": "eslint assets/js config functions",
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
@@ -66,6 +66,6 @@
     "stylelint-config-standard-scss": "^5.0"
   },
   "otherDependencies": {
-    "hugo": "0.107.0"
+    "hugo": "0.165.0"
   }
 }
